@@ -1,10 +1,6 @@
-// @ts-check
-
-/**
- * @type {import('next').NextConfig}
- **/
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/gh-pages-test',
+  reactStrictMode: true,
 }
 
 module.exports = nextConfig
