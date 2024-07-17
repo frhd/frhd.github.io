@@ -1,1 +1,166 @@
-hello world
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altes Postlager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #cc0000;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 20%;
+            background-color: white;
+            padding: 20px;
+            border-right: 2px solid #cc0000;
+        }
+        .sidebar img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .sidebar nav a {
+            display: block;
+            color: #cc0000;
+            text-decoration: none;
+            padding: 10px 0;
+            border-bottom: 1px solid #cc0000;
+            font-weight: 400;
+        }
+        .sidebar nav a.active {
+            background-color: #cc0000;
+            color: white;
+            font-weight: 700;
+        }
+        .content {
+            width: 80%;
+            padding: 20px;
+        }
+        .filter-section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .filter-section h3 {
+            width: 100%;
+            margin-top: 20px;
+            border-bottom: 2px solid #cc0000;
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .filter-group label {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .filter-group input {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #cc0000;
+            margin-right: 10px;
+            position: relative;
+            cursor: pointer;
+        }
+        .filter-group input:checked {
+            background-color: #cc0000;
+        }
+        .filter-group input:checked::before {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: #cc0000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+        .filter-collapse {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+        .filter-collapse button {
+            background-color: white;
+            border: 1px solid #cc0000;
+            padding: 5px 10px;
+            cursor: pointer;
+            color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="logo.png" alt="Altes Postlager">
+            <nav>
+                <a href="#ueber-uns">ÜBER UNS</a>
+                <a href="#programm" class="active">PROGRAMM</a>
+                <a href="#team">TEAM</a>
+                <a href="#gastronomie">GASTRONOMIE</a>
+                <a href="#partner">PARTNER</a>
+                <a href="#mieten">MIETEN</a>
+                <a href="#jobs">JOBS</a>
+                <a href="#kontakt">KONTAKT</a>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="filter-section">
+                <h3>Veranstaltungsart</h3>
+                <div class="filter-group">
+                    <label><input type="checkbox" checked> LIVE MUSIK</label>
+                    <label><input type="checkbox"> THEATER</label>
+                    <label><input type="checkbox"> COMEDY</label>
+                    <label><input type="checkbox" checked> PARTY</label>
+                    <label><input type="checkbox" checked> WEIN</label>
+                    <label><input type="checkbox"> PODCAST</label>
+                    <label><input type="checkbox"> FLOHMARKT</label>
+                    <label><input type="checkbox"> MESSE</label>
+                    <label><input type="checkbox"> QUIZ</label>
+                    <label><input type="checkbox"> FESTIVAL</label>
+                    <label><input type="checkbox"> SPORT</label>
+                    <label><input type="checkbox"> SKATE</label>
+                    <label><input type="checkbox"> YOGA</label>
+                </div>
+                <h3>Musikrichtung</h3>
+                <div class="filter-group">
+                    <label><input type="checkbox"> ROCK</label>
+                    <label><input type="checkbox" checked> JAZZ</label>
+                    <label><input type="checkbox"> ELECTRO</label>
+                    <label><input type="checkbox"> HIP HOP</label>
+                    <label><input type="checkbox"> POP</label>
+                </div>
+                <h3>Gastronomisches Angebot</h3>
+                <div class="filter-group">
+                    <label><input type="checkbox"> AN O BAN</label>
+                    <label><input type="checkbox"> KAIRO</label>
+                    <label><input type="checkbox"> LAURENZ</label>
+                    <label><input type="checkbox"> GUTLEUT BAR</label>
+                    <label><input type="checkbox"> ANGEBOT 2</label>
+                    <label><input type="checkbox"> ARCADE</label>
+                </div>
+                <div class="filter-collapse">
+                    <button>FILTER EINKLAPPEN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
